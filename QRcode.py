@@ -24,6 +24,7 @@ def generate_qr(data):
     buffer = BytesIO()
     img.save(buffer)
     buffer.seek(0)
+    src= bitcode
     
     return send_file(buffer, mimetype='image/png')
 
